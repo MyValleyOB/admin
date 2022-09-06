@@ -1,0 +1,203 @@
+// form style
+.user-send-email-wrapp{
+	width: calc(100% - 30px);
+
+	.custom-btn{
+		min-width: 200px;
+		text-transform: uppercase;
+	}
+}
+
+.doc-view-bx{
+	max-width: 800px;
+
+	.emial-box{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+
+		.mdl-input-bx{
+			margin-bottom: 30px;
+			width: 100%;
+			max-width: 350px;
+			display: flex;
+			align-items: center;
+			column-gap: 15px;
+			label{
+				margin: 0;
+			}
+		}
+	}
+
+	.name-box{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 50px;
+		column-gap: 15px;
+	}
+
+	iframe{
+		width: 100%;
+		min-height: 600px;
+	}
+}
+
+.input-bx{
+	margin-bottom: 30px;
+	label{
+		font-weight: 600;
+		display: block;
+		margin-bottom: 5px;
+	}
+	.form-control{
+		border: none;
+		border-bottom: 1px solid rgba(#000, 0.2);
+	}
+}
+
+.input-checkbox{
+	display: flex;
+	column-gap: 10px;
+	input[type=checkbox]{
+		flex: none;
+		height: 16px;
+		width: 16px;
+		margin-top: 3px;
+		outline: none;
+		cursor: pointer;
+	}
+	label{
+		font-weight: 500;
+		cursor: pointer;
+	}
+}
+
+.input-radio{
+	display: flex;
+	column-gap: 10px;
+	input[type=radio]{
+		flex: none;
+		height: 20px;
+		width: 20px;
+		line-height: 20px;
+		text-align: center;
+		border: 1px solid rgba(#000, 0.2);
+		border-radius: 100%;
+		accent-color: #009688;
+		outline: none;
+		cursor: pointer;
+	}
+	label{
+		font-weight: 500;
+		font-size: 15px;
+		cursor: pointer;
+	}
+}
+
+.input-submit{
+	margin-top: 30px;
+	.custom-btn{
+		width: 100%;
+		text-transform: uppercase;
+	}
+}
+
+.date-of-birth-fields{
+	text-align: center;
+	max-width: 600px;
+	margin: 200px auto;
+	.heading{
+		margin-bottom: 30px;
+		font-size: 21px;
+		font-weight: 600;
+	}
+
+	.dob-wrapp{
+		display: flex;
+		column-gap: 15px;
+		.dob-select{
+			flex: 1;
+			position: relative;
+			&:after{
+				content: '\f107';
+				font: normal normal normal 14px/1 FontAwesome;
+				font-size: 18px;
+
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		select{
+			padding: 15px;
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+		}
+	}
+}
+
+
+.client-document-wrapp{
+	max-width: 800px;
+	margin: 50px auto;
+
+	.signature-box{
+		margin: 50px 0;
+		display: flex;
+		justify-content: space-between;
+		.custom-btn{
+			padding: 8px 15px;
+			border-radius: 2px;
+		}
+	}
+}
+
+#signatureModal{
+	.modal-body{
+		padding: 25px;
+	}
+}
+
+.signatureModContent{
+	textarea{
+		width: 100%;
+		height: 200px;
+		border-radius: 5px;
+		border: 1px solid #000;
+		margin-bottom: 15px;
+		padding: 15px;
+	}
+
+	.button-bx{
+		display: flex;
+		column-gap: 15px;
+		button{
+			min-width: 150px;
+			border-radius: 2px;
+			text-transform: uppercase;
+		}
+		.close-btn{
+			background-color: #cd1515;
+		}
+	}
+}
+
+.drop-upload-check-wrapp{
+	max-width: 900px;
+	.drop-zone {
+		max-height: 350px;
+	}
+	.custom-btn{
+		width: 100%;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+	.input-bx{
+		margin-bottom: 15px;
+	}
+}

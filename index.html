@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Valley Obgyn</title>
+
+	<link rel="stylesheet" href="asset/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="asset/css/main.css">
+
+	<script>
+		sessionStorage.getItem("isLogged") ? window.location.href = "admin.html" : null;
+	</script>
+
+	<script src="asset/js/jquery.min.js"></script>
+	<script src="asset/js/popper.min.js"></script>
+	<script src="asset/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<section id="wrapper">
+		<section class="common-sec login-page-sec">
+			<div class="container">
+				<div class="logo-dv text-center">
+					<a class="navbar-brand" href="index.html">
+						<span class="site-logo"><img src="asset/img/logo.svg" alt="Logo"></span>
+					</a>
+				</div>
+
+				<div class="login-form-dv">
+					<section class="custom-form-sec">
+						<form class="icon-form" id="loginForm">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="input-bx">
+										<input type="text" name="username" id="username" class="form-control" autocomplete="off" required placeholder="Username"/>
+									</div>
+								</div><!-- col -->
+							</div><!-- row -->
+
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="input-bx pass-bx">
+										<input type="password" name="password" id="password" class="form-control" autocomplete="off" required placeholder="Password"/>
+									</div>
+										<div class="text-right my-1 .a">
+								<a href="javascript:void(0);">Forgot Password</a>
+							</div>
+								</div><!-- col -->
+
+							</div><!-- row -->
+
+							<div class="submit mt-4" >
+								<button type="submit" class="custom-btn round-btn">Login</button>
+							</div>
+							<p class="msg-error">Please enter correct Date of Birth</p>
+						</form>
+					</section><!-- custom-form-sec -->
+				</div><!-- login-form-dv -->
+			</div><!-- container -->
+		</section><!-- common-sec -->
+	</section><!-- wrapper -->
+
+	<script src="asset/js/custom.js"></script>
+</body>
+</html>

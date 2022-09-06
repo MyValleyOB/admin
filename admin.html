@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Office</title>
+
+	<link rel="stylesheet" href="asset/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="asset/css/main.css">
+
+	<script>
+		!sessionStorage.getItem("isLogged") ? window.location.href = "index.html" : null;
+	</script>
+
+	<script src="asset/js/jquery.min.js"></script>
+	<script src="asset/js/popper.min.js"></script>
+	<script src="asset/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<section id="wrapper">
+		<header class="site-header">
+			<div class="container-fluid">
+				<nav class="navbar site-navigation">
+					<div class="navbar-brand">
+						<a href="#">
+							<img src="asset/img/logo.svg" alt="Logo">
+						</a>
+					</div>
+
+					<div class="search-dv">
+						<form action="" id="search_form">
+							<button type="submit">
+								<img src="asset/img/search-icon.png" alt="Search">
+							</button>
+							<input type="text" name="search" id="search" placeholder="Search">
+						</form>
+						<span class="ic-dv arrow-ic">
+							<a href="#">
+								<img src="asset/img/up-dwn-arr.png" alt="Icon">
+							</a>
+						</span>
+					</div>
+					
+					<ul class="navbar-nav">
+						<li>
+							<a href="#" class="active">
+								<span class="txt">Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="analysis.html">
+								<span class="icon">
+									<img src="asset/img/report.png" alt="Report" class="iconBlack"/>
+									<img src="asset/img/report-white.png" alt="Report" class="iconBlue"/>
+								</span>
+								<span class="txt">Report</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin-history.html">
+								<span class="icon">
+									<img src="asset/img/share-clock.png" alt="History" class="iconBlack"/>
+									<img src="asset/img/share-clock-blue.png" alt="History" class="iconBlue"/>
+								</span>
+								<span class="txt">History</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" id="logout">
+								<span class="icon"><img src="asset/img/logout.png" alt="LogOut"></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div><!-- container -->
+		</header>
+
+
+		<main class="site-main">
+			<section class="user-backup-sec">
+				<div class="container-fluid">
+
+					<div class="user-backup-table-wrapp">
+						<div class="user-popup-btns">
+							<button class="custom-btn" data-toggle="modal" data-target="#addNewUserModal">Add New User</button>
+							<button class="custom-btn" data-toggle="modal" data-target="#backupModal">Backup</button>
+						</div><!-- user-popup-btns -->
+
+						<table class="custom-table custom-admin-table" id="userList">
+							<!-- <tr>
+								<th>Email</th>
+								<th>Passwords</th>
+								<th>History</th>
+								<th></th>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>brandon.banks@gmail.com</td>
+								<td>Walter@123</td>
+								<td>10 days</td>
+								<td>
+									<button class="tb-btn delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr> -->
+							
+						</table>
+					</div>
+
+				</div><!-- container -->
+			</section><!-- common-sec -->
+		</main>
+	</section><!-- wrapper -->
+
+	<!-- Modal Add new user -->
+	<div class="modal fade custom-modal" id="addNewUserModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<h3 class="modal-title text-center">Add New User</h3>
+
+					<section class="custom-form-sec">
+						<form class="icon-form" id="addUserForm">
+							<div class="mdl-input-bx">
+								<label>Email</label>
+								<input type="text" name="" id="addEmail" class="form-control" autocomplete="off" required placeholder="Enter Email"/>
+							</div>
+
+							<div class="mdl-input-bx">
+								<label>Password</label>
+								<input type="password" name="" id="addPassword" class="form-control" autocomplete="off" required placeholder="Enter Password"/>
+							</div>
+
+							<div class="mdl-input-bx">
+								<label>History</label>
+								<select name="" class="form-control" id="addHistory">
+									<option value="7-days">0 Days</option>
+									<option value="7-days">7 Days</option>
+									<option value="30-days">30 Days</option>
+									<option value="90-days">90 Days</option>
+									<option value="180-days">180 Days</option>
+									<option value="365-days">365 Days</option>
+								</select>
+							</div>
+
+							<div class="mdl-input-bx">
+								<label>IP Address (Optional)</label>
+								<input type="text" name="" id="addIps" class="form-control" autocomplete="off" placeholder="Enter IP Address"/>
+							</div>
+
+							<button type="submit" class="custom-btn popSubmit">Add</button>
+						</form>
+					</section><!-- custom-form-sec -->
+
+				</div><!-- modal-body -->
+			</div>
+		</div>
+	</div>
+	<!-- modal -->
+
+	<!-- Modal backup -->
+	<div class="modal fade custom-modal" id="backupModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<h3 class="modal-title text-center">Backup</h3>
+
+					<section class="custom-form-sec">
+						<form class="icon-form" action="" method="post">
+							<div class="mdl-input-bx">
+								<label>Enter Backup Email</label>
+								<input type="text" name="" id="" class="form-control" autocomplete="off" required placeholder="Enter Backup Email"/>
+							</div>
+							
+							<button type="submit" class="custom-btn popSubmit">Backup</button>
+						</form>
+					</section><!-- custom-form-sec -->
+
+				</div><!-- modal-body -->
+			</div>
+		</div>
+	</div>
+	<!-- modal -->
+
+	<script src="asset/js/custom.js"></script>
+</body>
+</html>

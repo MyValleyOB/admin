@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Office</title>
+
+	<link rel="stylesheet" href="asset/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="asset/css/main.css">
+
+	<script>
+		!sessionStorage.getItem("isLogged") ? window.location.href = "index.html" : null;
+	</script>
+
+	<script src="asset/js/jquery.min.js"></script>
+	<script src="asset/js/popper.min.js"></script>
+	<script src="asset/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<section id="wrapper">
+		<header class="site-header">
+			<div class="container-fluid">
+				<nav class="navbar site-navigation">
+					<div class="navbar-brand">
+						<a href="#">
+							<img src="asset/img/logo.svg" alt="Logo">
+						</a>
+					</div>
+
+					<div class="search-dv">
+						<form action="" id="search_form">
+							<button type="submit">
+								<img src="asset/img/search-icon.png" alt="Search">
+							</button>
+							<input type="text" name="search" id="search" placeholder="Search">
+						</form>
+						<span class="ic-dv arrow-ic">
+							<a href="#">
+								<img src="asset/img/up-dwn-arr.png" alt="Icon">
+							</a>
+						</span>
+					</div>
+					
+					<ul class="navbar-nav">
+						<li>
+							<a href="index.html">
+								<span class="txt">Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="analysis.html">
+								<span class="icon">
+									<img src="asset/img/report.png" alt="Report" class="iconBlack"/>
+									<img src="asset/img/report-white.png" alt="Report" class="iconBlue"/>
+								</span>
+								<span class="txt">Report</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="active">
+								<span class="icon">
+									<img src="asset/img/share-clock.png" alt="History" class="iconBlack"/>
+									<img src="asset/img/share-clock-blue.png" alt="History" class="iconBlue"/>
+								</span>
+								<span class="txt">History</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" id="logout">
+								<span class="icon"><img src="asset/img/logout.png" alt="LogOut"></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div><!-- container -->
+		</header>
+
+
+		<main class="site-main">
+			<section class="common-sec user-backup-sec">
+				<div class="container-fluid">
+
+					<div class="user-backup-table-wrapp">
+						<table class="custom-table">
+							<tr>
+								<th>Receipt ID</th>
+								<th>Date</th>
+								<th>Amountt</th>
+								<th>Received By</th>
+								<th class="text-center">Download</th>
+								<th class="text-center">View</th>
+								<th class="text-center position-relative" style="min-width: 100px;">
+									<button class="custom-btn popSubmit" style="
+									position: absolute;
+									top: 5px;
+									left: 0;
+									right: 0;
+									margin: 0 auto;
+									font-size: 14px;
+									padding: 10px 20px;
+									max-width: 130px;
+									">
+									Delete All
+								</button>
+								
+							</th>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>SP</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>SP</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>GU</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>MG</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>MG</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>MG</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>MG</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>MG</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>MG</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>MG</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>#434243</td>
+								<td>07-21-2022</td>
+								<td>$50</td>
+								<td>MG</td>
+								<td class="text-center">
+									<button class="icon-btn download">
+										<span class="icon">
+											<img src="asset/img/download.png" alt="Download"/ class="iconBlack"/>
+											<img src="asset/img/download-white.png" alt="Download"/ class="iconBlue">
+										</span>
+									</button>
+								</td>
+								<td class="text-center">
+									<button class="icon-btn mr-2">
+										<span><img src="asset/img/view.png" alt="View"></span>
+									</button>
+									</td>
+									<td class="text-center">
+									<button class="tb-btn-smpl delete">
+										<span class="icon"><img src="asset/img/Icon-feather-trash.png" alt="Trash"/></span>
+									</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div><!-- container -->
+			</section><!-- common-sec -->
+		</main>
+	</section><!-- wrapper -->
+
+	<script src="asset/js/custom.js"></script>
+
+</body>
+</html>
