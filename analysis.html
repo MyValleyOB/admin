@@ -73,15 +73,16 @@
 						<div class="analysis-wrapp mx-auto">
 							<div class="mdl-input-bx">
 								<label>Date 1</label>
-								<input type="text" name="" id="" class="form-control" autocomplete="off" required placeholder="Enter Date"/>
+								<input type="date" name="" id="startDate" class="form-control" autocomplete="off" required placeholder="Enter Date"/>
 							</div>
 
 							<div class="mdl-input-bx">
 								<label>Date 2</label>
-								<input type="text" name="" id="" class="form-control" autocomplete="off" required placeholder="Enter Date"/>
+								<input type="date" name="" id="endDate" class="form-control" autocomplete="off" required placeholder="Enter Date"/>
 							</div>
 
-							<button type="submit" class="custom-btn w-100 text-uppercase">Send</button>		
+							<button type="submit" id="reportSubmit" class="custom-btn w-100 text-uppercase">Send</button>	
+							<p class="msg-error">Please enter correct dates</p>	
 						</div><!-- analysis-wrapp -->
 
 					</div><!-- container -->
